@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Kino Kodi 4168</title>
+  <title>Kino Kodi — 4168</title>
 
   <style>
     * {
@@ -20,15 +19,8 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
-
       background:
-        radial-gradient(
-          circle at top,
-          #202b52 0%,
-          #0b0d16 45%,
-          #030303 100%
-        );
-
+        radial-gradient(circle at top, #202b52 0%, #0b0d16 45%, #030303 100%);
       color: white;
     }
 
@@ -41,44 +33,39 @@
       padding: 30px 22px;
       border-radius: 25px;
       text-align: center;
-
       background: rgba(20, 22, 35, 0.90);
-
       border: 1px solid rgba(255,255,255,0.10);
-
-      box-shadow:
-        0 20px 60px rgba(0,0,0,0.6);
-
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
       backdrop-filter: blur(15px);
     }
 
     .logo {
       width: 78px;
       height: 78px;
-
       margin: 0 auto 18px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       border-radius: 50%;
-
       font-size: 34px;
-
-      background: linear-gradient(
-        135deg,
-        #ff0000,
-        #8b0000
-      );
-
-      box-shadow:
-        0 0 35px rgba(255,0,0,0.35);
+      background: linear-gradient(135deg, #ff0000, #8b0000);
+      box-shadow: 0 0 35px rgba(255,0,0,0.35);
     }
 
     h1 {
       font-size: 26px;
       margin-bottom: 12px;
+    }
+
+    .message {
+      padding: 15px;
+      margin-bottom: 18px;
+      border-radius: 15px;
+      background: rgba(255,193,7,0.08);
+      border: 1px solid rgba(255,193,7,0.25);
+      color: #ffd45c;
+      font-weight: bold;
+      line-height: 1.4;
     }
 
     .description {
@@ -87,45 +74,17 @@
       margin-bottom: 20px;
     }
 
-    .message {
-      padding: 15px;
-
-      margin-bottom: 18px;
-
-      border-radius: 15px;
-
-      background: rgba(255,193,7,0.08);
-
-      border: 1px solid rgba(255,193,7,0.25);
-
-      color: #ffd45c;
-
-      font-weight: bold;
-
-      line-height: 1.4;
-    }
-
     .btn {
       width: 100%;
-
       display: block;
-
       padding: 15px;
-
       margin-top: 10px;
-
       border: none;
-
       border-radius: 15px;
-
       text-decoration: none;
-
       font-size: 16px;
-
       font-weight: bold;
-
       cursor: pointer;
-
       transition: 0.2s;
     }
 
@@ -136,24 +95,16 @@
     .youtube {
       background: #ff0000;
       color: white;
-
-      box-shadow:
-        0 8px 25px rgba(255,0,0,0.25);
+      box-shadow: 0 8px 25px rgba(255,0,0,0.25);
     }
 
     .timer {
       display: none;
-
       margin-top: 18px;
-
       padding: 15px;
-
       border-radius: 15px;
-
       background: rgba(255,255,255,0.06);
-
       color: #d0d0d0;
-
       line-height: 1.5;
     }
 
@@ -165,15 +116,10 @@
 
     .code-box {
       display: none;
-
       margin-top: 20px;
-
       padding: 22px;
-
       border-radius: 18px;
-
       background: rgba(0,255,136,0.06);
-
       border: 1px solid rgba(0,255,136,0.22);
     }
 
@@ -185,29 +131,21 @@
 
     .code {
       font-size: 40px;
-
       font-weight: 900;
-
       letter-spacing: 6px;
-
       color: #00ff88;
-
       margin-bottom: 15px;
     }
 
     .telegram {
       background: #229ed9;
       color: white;
-
-      box-shadow:
-        0 8px 25px rgba(34,158,217,0.25);
+      box-shadow: 0 8px 25px rgba(34,158,217,0.25);
     }
 
     .footer {
       margin-top: 22px;
-
       color: #666;
-
       font-size: 12px;
     }
 
@@ -223,17 +161,10 @@
 
     <div class="card">
 
-      <!-- LOGO -->
-      <div class="logo">
-        🎬
-      </div>
+      <div class="logo">🎬</div>
 
-      <!-- TITLE -->
-      <h1>
-        Kino Kodini Olish
-      </h1>
+      <h1>Kino Kodini Olish</h1>
 
-      <!-- USER MESSAGE -->
       <div class="message">
         Video ni ko‘rib 5+1 qilsang ko‘t san 😎
       </div>
@@ -243,10 +174,10 @@
         kanalimizga obuna bo‘ling.
       </p>
 
-      <!-- YOUTUBE BUTTON -->
+      <!-- YOUTUBE @old_rosky -->
       <a
         class="btn youtube"
-        href="https://www.youtube.com/@rosky_old"
+        href="https://www.youtube.com/@old_rosky"
         target="_blank"
         rel="noopener noreferrer"
         id="youtubeBtn">
@@ -255,31 +186,20 @@
 
       </a>
 
-      <!-- TIMER -->
-      <div
-        class="timer"
-        id="timer">
+      <!-- 15 SONIYA TIMER -->
+      <div class="timer" id="timer">
 
         ⏳ Iltimos, kuting...
 
         <br>
 
-        <span
-          class="seconds"
-          id="seconds">
-
-          15
-
-        </span>
-
+        <span class="seconds" id="seconds">15</span>
         soniya
 
       </div>
 
-      <!-- CODE -->
-      <div
-        class="code-box"
-        id="codeBox">
+      <!-- KINO KODI -->
+      <div class="code-box" id="codeBox">
 
         <div class="code-title">
           🎟️ Sizning kino kodingiz
@@ -325,63 +245,41 @@
     const codeBox =
       document.getElementById("codeBox");
 
-
     let started = false;
 
+    youtubeBtn.addEventListener("click", function () {
 
-    youtubeBtn.addEventListener(
-      "click",
-      function () {
+      if (started) {
+        return;
+      }
 
-        /*
-          YouTube yangi oynada ochiladi.
-          Timer esa shu sahifada boshlanadi.
-        */
+      started = true;
 
-        if (started) {
-          return;
-        }
+      timer.style.display = "block";
 
-        started = true;
+      let seconds = 15;
 
-        timer.style.display = "block";
+      secondsText.textContent = seconds;
 
-        let seconds = 15;
+      const countdown = setInterval(function () {
+
+        seconds--;
 
         secondsText.textContent = seconds;
 
+        if (seconds <= 0) {
 
-        const countdown =
-          setInterval(
-            function () {
+          clearInterval(countdown);
 
-              seconds--;
+          timer.classList.add("hidden");
 
-              secondsText.textContent =
-                seconds;
+          codeBox.style.display = "block";
 
+        }
 
-              if (seconds <= 0) {
+      }, 1000);
 
-                clearInterval(countdown);
-
-
-                timer.classList.add(
-                  "hidden"
-                );
-
-
-                codeBox.style.display =
-                  "block";
-
-              }
-
-            },
-            1000
-          );
-
-      }
-    );
+    });
 
   </script>
 
