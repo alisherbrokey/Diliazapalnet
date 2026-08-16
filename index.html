@@ -3,114 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kino Kodi — 4168</title>
+
+  <title>Kino Kodi 4168</title>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
 
     body {
       min-height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      background:
-        radial-gradient(circle at top, #182848 0%, transparent 45%),
-        linear-gradient(135deg, #050505, #0b1020, #050505);
-      color: white;
+      justify-content: center;
       padding: 20px;
+
+      background:
+        radial-gradient(
+          circle at top,
+          #202b52 0%,
+          #0b0d16 45%,
+          #030303 100%
+        );
+
+      color: white;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 430px;
     }
 
     .card {
-      width: 100%;
-      max-width: 430px;
       padding: 30px 22px;
+      border-radius: 25px;
       text-align: center;
-      border-radius: 24px;
-      background: rgba(20, 20, 30, 0.82);
-      border: 1px solid rgba(255,255,255,.1);
-      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+
+      background: rgba(20, 22, 35, 0.90);
+
+      border: 1px solid rgba(255,255,255,0.10);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.6);
+
       backdrop-filter: blur(15px);
     }
 
     .logo {
-      width: 75px;
-      height: 75px;
+      width: 78px;
+      height: 78px;
+
       margin: 0 auto 18px;
-      border-radius: 50%;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 30px;
-      background: linear-gradient(135deg, #ff0000, #8b0000);
-      box-shadow: 0 0 30px rgba(255,0,0,.35);
+
+      border-radius: 50%;
+
+      font-size: 34px;
+
+      background: linear-gradient(
+        135deg,
+        #ff0000,
+        #8b0000
+      );
+
+      box-shadow:
+        0 0 35px rgba(255,0,0,0.35);
     }
 
     h1 {
-      font-size: 25px;
+      font-size: 26px;
       margin-bottom: 12px;
     }
 
     .description {
       color: #c8c8c8;
       line-height: 1.5;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
-    .warning {
-      padding: 14px;
+    .message {
+      padding: 15px;
+
       margin-bottom: 18px;
-      border-radius: 14px;
-      background: rgba(255, 193, 7, .08);
-      border: 1px solid rgba(255, 193, 7, .25);
+
+      border-radius: 15px;
+
+      background: rgba(255,193,7,0.08);
+
+      border: 1px solid rgba(255,193,7,0.25);
+
       color: #ffd45c;
+
       font-weight: bold;
+
+      line-height: 1.4;
     }
 
     .btn {
       width: 100%;
-      border: none;
-      padding: 15px;
-      border-radius: 14px;
-      margin-top: 10px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: .2s;
-      text-decoration: none;
+
       display: block;
+
+      padding: 15px;
+
+      margin-top: 10px;
+
+      border: none;
+
+      border-radius: 15px;
+
+      text-decoration: none;
+
+      font-size: 16px;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: 0.2s;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
+    .btn:active {
+      transform: scale(0.97);
     }
 
     .youtube {
       background: #ff0000;
       color: white;
-      box-shadow: 0 8px 25px rgba(255,0,0,.25);
+
+      box-shadow:
+        0 8px 25px rgba(255,0,0,0.25);
     }
 
     .timer {
-      margin-top: 18px;
-      padding: 14px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.05);
-      color: #aaa;
       display: none;
+
+      margin-top: 18px;
+
+      padding: 15px;
+
+      border-radius: 15px;
+
+      background: rgba(255,255,255,0.06);
+
+      color: #d0d0d0;
+
+      line-height: 1.5;
+    }
+
+    .seconds {
+      color: #00ff88;
+      font-size: 22px;
+      font-weight: bold;
     }
 
     .code-box {
       display: none;
+
       margin-top: 20px;
-      padding: 20px;
+
+      padding: 22px;
+
       border-radius: 18px;
-      background: rgba(0, 255, 140, .06);
-      border: 1px solid rgba(0,255,140,.2);
+
+      background: rgba(0,255,136,0.06);
+
+      border: 1px solid rgba(0,255,136,0.22);
     }
 
     .code-title {
@@ -120,21 +184,30 @@
     }
 
     .code {
-      font-size: 36px;
+      font-size: 40px;
+
       font-weight: 900;
-      letter-spacing: 5px;
+
+      letter-spacing: 6px;
+
       color: #00ff88;
+
       margin-bottom: 15px;
     }
 
     .telegram {
       background: #229ed9;
       color: white;
+
+      box-shadow:
+        0 8px 25px rgba(34,158,217,0.25);
     }
 
     .footer {
       margin-top: 22px;
+
       color: #666;
+
       font-size: 12px;
     }
 
@@ -146,89 +219,170 @@
 
 <body>
 
-  <div class="card">
+  <div class="container">
 
-    <div class="logo">🎬</div>
+    <div class="card">
 
-    <h1>Kino Kodini Olish</h1>
-
-    <p class="description">
-      Video ni ko‘rib 5+1 qilsang ko‘t san 😎
-    </p>
-
-    <div class="warning">
-      ⚠️ Avval YouTube kanalimizga obuna bo‘ling
-    </div>
-
-    <a
-      class="btn youtube"
-      href="https://www.youtube.com/@rosky_old"
-      target="_blank"
-      id="youtubeBtn">
-      🔴 YouTube kanaliga obuna bo‘lish
-    </a>
-
-    <div class="timer" id="timer">
-      ⏳ Iltimos, kuting: <b id="seconds">15</b> soniya
-    </div>
-
-    <div class="code-box" id="codeBox">
-
-      <div class="code-title">
-        🎟️ Sizning kino kodingiz
+      <!-- LOGO -->
+      <div class="logo">
+        🎬
       </div>
 
-      <div class="code">
-        4168
+      <!-- TITLE -->
+      <h1>
+        Kino Kodini Olish
+      </h1>
+
+      <!-- USER MESSAGE -->
+      <div class="message">
+        Video ni ko‘rib 5+1 qilsang ko‘t san 😎
       </div>
 
+      <p class="description">
+        Kino kodini olish uchun avval YouTube
+        kanalimizga obuna bo‘ling.
+      </p>
+
+      <!-- YOUTUBE BUTTON -->
       <a
-        class="btn telegram"
-        href="https://t.me/Tarjima_kinolar_ujas_bot"
-        target="_blank">
-        🤖 Telegram botga kirish
+        class="btn youtube"
+        href="https://www.youtube.com/@rosky_old"
+        target="_blank"
+        rel="noopener noreferrer"
+        id="youtubeBtn">
+
+        🔴 YouTube kanaliga obuna bo‘lish
+
       </a>
 
-    </div>
+      <!-- TIMER -->
+      <div
+        class="timer"
+        id="timer">
 
-    <div class="footer">
-      © 2026 Kino Bot
+        ⏳ Iltimos, kuting...
+
+        <br>
+
+        <span
+          class="seconds"
+          id="seconds">
+
+          15
+
+        </span>
+
+        soniya
+
+      </div>
+
+      <!-- CODE -->
+      <div
+        class="code-box"
+        id="codeBox">
+
+        <div class="code-title">
+          🎟️ Sizning kino kodingiz
+        </div>
+
+        <div class="code">
+          4168
+        </div>
+
+        <!-- TELEGRAM BOT -->
+        <a
+          class="btn telegram"
+          href="https://t.me/Tarjima_kinolar_ujas_bot"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          🤖 Telegram botga kirish
+
+        </a>
+
+      </div>
+
+      <div class="footer">
+        © 2026 Kino Bot
+      </div>
+
     </div>
 
   </div>
 
+
   <script>
-    const youtubeBtn = document.getElementById("youtubeBtn");
-    const timer = document.getElementById("timer");
-    const secondsText = document.getElementById("seconds");
-    const codeBox = document.getElementById("codeBox");
+
+    const youtubeBtn =
+      document.getElementById("youtubeBtn");
+
+    const timer =
+      document.getElementById("timer");
+
+    const secondsText =
+      document.getElementById("seconds");
+
+    const codeBox =
+      document.getElementById("codeBox");
+
 
     let started = false;
 
-    youtubeBtn.addEventListener("click", function () {
 
-      if (started) return;
+    youtubeBtn.addEventListener(
+      "click",
+      function () {
 
-      started = true;
-      timer.style.display = "block";
+        /*
+          YouTube yangi oynada ochiladi.
+          Timer esa shu sahifada boshlanadi.
+        */
 
-      let seconds = 15;
-      secondsText.textContent = seconds;
-
-      const countdown = setInterval(() => {
-
-        seconds--;
-        secondsText.textContent = seconds;
-
-        if (seconds <= 0) {
-          clearInterval(countdown);
-          timer.classList.add("hidden");
-          codeBox.style.display = "block";
+        if (started) {
+          return;
         }
 
-      }, 1000);
+        started = true;
 
-    });
+        timer.style.display = "block";
+
+        let seconds = 15;
+
+        secondsText.textContent = seconds;
+
+
+        const countdown =
+          setInterval(
+            function () {
+
+              seconds--;
+
+              secondsText.textContent =
+                seconds;
+
+
+              if (seconds <= 0) {
+
+                clearInterval(countdown);
+
+
+                timer.classList.add(
+                  "hidden"
+                );
+
+
+                codeBox.style.display =
+                  "block";
+
+              }
+
+            },
+            1000
+          );
+
+      }
+    );
+
   </script>
 
 </body>
