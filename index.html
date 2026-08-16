@@ -46,7 +46,6 @@
       align-items: center;
       justify-content: center;
       font-size: 30px;
-      font-weight: bold;
       background: linear-gradient(135deg, #ff0000, #8b0000);
       box-shadow: 0 0 30px rgba(255,0,0,.35);
     }
@@ -161,10 +160,9 @@
       ⚠️ Avval YouTube kanalimizga obuna bo‘ling
     </div>
 
-    <!-- YOUTUBE LINKNI SHU YERGA QO'YING -->
     <a
       class="btn youtube"
-      href="href="https://www.youtube.com/@old_rosky"
+      href="https://www.youtube.com/@rosky_old"
       target="_blank"
       id="youtubeBtn">
       🔴 YouTube kanaliga obuna bo‘lish
@@ -194,54 +192,44 @@
     </div>
 
     <div class="footer">
-      © Developer @Dnx Rosky 
+      © 2026 Kino Bot
     </div>
 
   </div>
 
+  <script>
+    const youtubeBtn = document.getElementById("youtubeBtn");
+    const timer = document.getElementById("timer");
+    const secondsText = document.getElementById("seconds");
+    const codeBox = document.getElementById("codeBox");
 
-<script>
+    let started = false;
 
-  const youtubeBtn = document.getElementById("youtubeBtn");
-  const timer = document.getElementById("timer");
-  const secondsText = document.getElementById("seconds");
-  const codeBox = document.getElementById("codeBox");
+    youtubeBtn.addEventListener("click", function () {
 
-  let started = false;
+      if (started) return;
 
-  youtubeBtn.addEventListener("click", function () {
+      started = true;
+      timer.style.display = "block";
 
-    if (started) return;
-
-    started = true;
-
-    timer.style.display = "block";
-
-    let seconds = 15;
-
-    secondsText.textContent = seconds;
-
-    const countdown = setInterval(() => {
-
-      seconds--;
-
+      let seconds = 15;
       secondsText.textContent = seconds;
 
-      if (seconds <= 0) {
+      const countdown = setInterval(() => {
 
-        clearInterval(countdown);
+        seconds--;
+        secondsText.textContent = seconds;
 
-        timer.classList.add("hidden");
+        if (seconds <= 0) {
+          clearInterval(countdown);
+          timer.classList.add("hidden");
+          codeBox.style.display = "block";
+        }
 
-        codeBox.style.display = "block";
+      }, 1000);
 
-      }
-
-    }, 1000);
-
-  });
-
-</script>
+    });
+  </script>
 
 </body>
 </html>
